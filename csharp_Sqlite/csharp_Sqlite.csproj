@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9ADFAE1C-DEEB-4588-998D-C3FFE0A8854A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>csharp_Sqlite</RootNamespace>
+    <AssemblyName>SISCAD-IBNFU</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Program IBNFU\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8916557711D21BB22A1710E3446BCEC7F13AF339</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>csharp_Sqlite_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NovoLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirectX.Capture">
+      <HintPath>..\..\..\CapturaImagemWebCam\CapturaImagemWebCam\CapturaImagemWebCam\Support\DirectX.Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="DShowNET">
+      <HintPath>..\..\..\CapturaImagemWebCam\CapturaImagemWebCam\CapturaImagemWebCam\Support\DShowNET.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Nequeo, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=a8d0fd4d65ef7906, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoBase.2016.26.1.3\lib\4.6\Nequeo.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Collections, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=95250545e5d9f3b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoCollections.2016.26.1.6\lib\4.6\Nequeo.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.ComponentModel, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=5bff97510f36166b, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoComponentModel.2016.26.1.1\lib\4.6\Nequeo.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Conversion, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=8a861d1811aa83ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoConversion.2016.26.1.2\lib\4.6\Nequeo.Conversion.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Cryptography, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=058191c6ae32205d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoCryptography.2016.26.1.2\lib\4.6\Nequeo.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Cryptography.Key, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=058191c6ae32205d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoCryptographyKey.2016.26.1.1\lib\4.6\Nequeo.Cryptography.Key.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Data, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=731a1445b7d27437, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoData.2016.26.1.1\lib\4.6\Nequeo.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Directx.Capture, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=9a6b0377ef684961, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoDirectxCapture.2016.26.1.1\lib\4.6\Nequeo.Directx.Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Drawing, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=7a5ff21c6ca66d6e, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoDrawing.2016.26.1.1\lib\4.6\Nequeo.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Exceptions, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=1a6d786336d039df, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoExceptions.2016.26.1.1\lib\4.6\Nequeo.Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Forms, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=ca3d7291d4bd9e0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoForms.2016.26.1.1\lib\4.6\Nequeo.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Handler, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=17ce537f814a362f, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoHandler.2016.26.1.1\lib\4.6\Nequeo.Handler.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.IO.Audio, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=43b018473d802851, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoIOAudio.2016.26.1.3\lib\4.6\Nequeo.IO.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.IO.Compress, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=43b018473d802851, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoIOCompress.2016.26.1.2\lib\4.6\Nequeo.IO.Compress.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.IO.Stream, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=43b018473d802851, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoIOStream.2016.26.1.1\lib\4.6\Nequeo.IO.Stream.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Linq, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=ae2c2e9900db869f, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoLinq.2016.26.1.1\lib\4.6\Nequeo.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Media, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=d0404a8fed290f0f, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoMedia.2016.26.1.1\lib\4.6\Nequeo.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Model, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=577bba95b8d30372, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoModel.2016.26.1.1\lib\4.6\Nequeo.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Net, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=24770b6a676fdab1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoNet.2016.26.1.3\lib\4.6\Nequeo.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Primitive, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=605226a0b789a2b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoPrimitive.2016.26.1.1\lib\4.6\Nequeo.Primitive.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Reflection, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=3b355968680c6ed8, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoReflection.2016.26.1.2\lib\4.6\Nequeo.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Security, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=2d222aa2794dadca, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoSecurity.2016.26.1.1\lib\4.6\Nequeo.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Serialisation, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=60e6b5624b241280, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoSerialisation.2016.26.1.1\lib\4.6\Nequeo.Serialisation.dll</HintPath>
+    </Reference>
+    <Reference Include="Nequeo.Threading, Version=2016.26.1.1, Culture=neutral, PublicKeyToken=d8c99fcd48433f43, processorArchitecture=MSIL">
+      <HintPath>..\packages\NequeoThreading.2016.26.1.1\lib\4.6\Nequeo.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.112.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.112.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmControles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControles.Designer.cs">
+      <DependentUpon>frmControles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFotografar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFotografar.Designer.cs">
+      <DependentUpon>frmFotografar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImpressao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpressao.Designer.cs">
+      <DependentUpon>frmImpressao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndex.Designer.cs">
+      <DependentUpon>frmIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarregaDadosBD.cs" />
+    <Compile Include="Models\clsRegistros.cs" />
+    <Compile Include="Models\Membro.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\DalHelper.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\ValidaData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorios.Designer.cs">
+      <DependentUpon>frmRelatorios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmControles.resx">
+      <DependentUpon>frmControles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFotografar.resx">
+      <DependentUpon>frmFotografar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImpressao.resx">
+      <DependentUpon>frmImpressao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndex.resx">
+      <DependentUpon>frmIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmRelatorios.resx">
+      <DependentUpon>frmRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="csharp_Sqlite_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOS MODELO 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NovoLogo.ico" />
+    <Content Include="Resources\Calendário.jfif" />
+    <None Include="Resources\imprimir.png" />
+    <None Include="Resources\Direitos Reservados.jpg" />
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Ok.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\pesquisa.png" />
+    <None Include="Resources\IBNFU.jpg" />
+    <None Include="Resources\LOGO MODELO 3 - Copia.jpg" />
+    <None Include="Resources\LOGOS MODELO 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DXTMSFTLib">
+      <Guid>{5E77EB03-937C-11D1-B047-00AA003B6061}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.112.0\build\net451\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
